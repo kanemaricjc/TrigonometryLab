@@ -83,13 +83,13 @@ public class TrigonometryLab {
                         quadrant="Quadrant 3.";
                     } else if (normalization > 270 && normalization < 360) { //angles that lie on quadrant 4 ranges from 271-359
                         quadrant="Quadrant 4.";
-                    } else if ( normalization == 0 ) { //angles that lie on quadrant 4 ranges from 271-359
+                    } else if ( normalization == 0 ) { 
                         quadrant="the positive x-axis.";
-                    } else if ( normalization == 90 ) { //angles that lie on quadrant 4 ranges from 271-359
+                    } else if ( normalization == 90 ) { 
                         quadrant="the positive y-axis.";
-                    } else if ( normalization ==180 ) { //angles that lie on quadrant 4 ranges from 271-359
+                    } else if ( normalization ==180 ) { 
                         quadrant="the negative x-axis.";
-                    } else if ( normalization == 270 ) { //angles that lie on quadrant 4 ranges from 271-359
+                    } else if ( normalization == 270 ) { //these are angles that lie on an axis
                         quadrant="the negative y-axis.";
                     }             
                     String signofsin = null;
@@ -111,19 +111,19 @@ public class TrigonometryLab {
                         signofsin = "negative.";
                         signofcos = "positive.";
                         signoftan = "negative.";
-                    } else if ( quadrant.equals("the positive x-axis.") ) { //para ani sa ila gi check nako gamit 89, 91, 181, and 359 respectively to check for signs for quadrant 1, 2, 3, and 4.
+                    } else if ( quadrant.equals("the positive x-axis.") ) { //if normalized angle = 0
                         signofsin = "no sign(0).";
                         signofcos = "positive.";
                         signoftan = "no sign(0).";
-                    } else if ( quadrant.equals("the positive y-axis.") ) { //para ani sa ila gi check nako gamit 89, 91, 181, and 359 respectively to check for signs for quadrant 1, 2, 3, and 4.
+                    } else if ( quadrant.equals("the positive y-axis.") ) { //if normalized angle = 90
                         signofsin = "positive.";
                         signofcos = "no sign(0).";
                         signoftan = "undefined.";
-                    } else if ( quadrant.equals("the negative x-axis.") ) { //para ani sa ila gi check nako gamit 89, 91, 181, and 359 respectively to check for signs for quadrant 1, 2, 3, and 4.
+                    } else if ( quadrant.equals("the negative x-axis.") ) { //if normalized angle = 180
                         signofsin = "no sign(0).";
                         signofcos = "negative.";
                         signoftan = "no sign(0).";
-                    } else if ( quadrant.equals("the negative y-axis.") ) { //para ani sa ila gi check nako gamit 89, 91, 181, and 359 respectively to check for signs for quadrant 1, 2, 3, and 4.
+                    } else if ( quadrant.equals("the negative y-axis.") ) { //if normalized angle = 270
                         signofsin = "negative.";
                         signofcos = "no sign(0).";
                         signoftan = "Undefined.";
@@ -428,4 +428,5 @@ public class TrigonometryLab {
             
         input.close();
       }   
+
 }
