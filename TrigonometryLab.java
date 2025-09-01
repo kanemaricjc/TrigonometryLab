@@ -24,42 +24,28 @@ public class TrigonometryLab {
                 System.out.println("2: Cosine");        
                 System.out.println("3: Tangent");
                 System.out.println("4: All three trigonometric functions");
-                System.out.println("5: Cosecant");
-                System.out.println("6: Secant");
-                System.out.println("7: Cotangent");
-                System.out.println("8: All three inverse trigonometric functions");
-                System.out.println("9: All functions");
                 int choice1 = input.nextInt();
                 
                 double angle1rad=toRadians(angle1);
                 double sine1 = sin(angle1rad);
                 double cosine1 = cos(angle1rad);
                 double tangent1 = tan(angle1rad); //gi define lang nako daan para dili nako mag balik balik and i can just use the already named variables
-                double cosecant1 = 1/sine1;
-                double secant1 = 1/cosine1;
-                double cotangent1 = 1/tangent1; // same here sa taas pero optional ni
                 
-                    if ( choice1==1 || choice1==4 || choice1==9 ) {
+                    if ( choice1==1 || choice1==4 ) {
                         System.out.println("Its value in Sine is " + sine1 + ".");
-                    } if ( choice1==2 || choice1==4 || choice1==9 ) {
+                    } if ( choice1==2 || choice1==4 ) {
                         System.out.println("Its value in cosine is " + cosine1 + ".");
-                    } if ( choice1==3 || choice1==4 || choice1==9 ) {  
+                    } if ( choice1==3 || choice1==4 ) {  
                             if (abs(angle1%180) ==90 ) { //gigamitan nako ni diriag modulo operator para mahibal an ang remainder if angle1 divided by 180 is 90. Since 90 over 180 leaves a remainder of 90 and 270 over 180 also leaves a remainder of 90.
                                 System.out.println("The value in Tangent of " + angle1 + " degrees is undefined since it is a multiple of 180 that started at 90.");
                             } else {
                                 System.out.println("Its value in Tangent is " + tangent1 + ".");
                             }//kani tanan kay gigamitan nakog logical OR operator. Pwede ragud dili pero if dili ko mag gamit ana na operator kay i would need to repeat sa else if for choice 4
-                    
-                    } if ( choice1==5 || choice1==8 || choice1==9 ) {
-                        System.out.println( "Its value in Cosecant is "+ cosecant1 + "." );
-                    } if ( choice1==6 || choice1==8 || choice1==9 ) {
-                        System.out.println( "Its value in Secant is "+ secant1 + "." );
-                    } if ( choice1==7 || choice1==8 || choice1==9 ) {
-                        System.out.println( "Its value in Cotangent is "+ cotangent1 + "." );
                     } else {
-                        System.out.println("Please choose 1-8 only.");
+                        System.out.println("Please choose 1-4 only.");
                         input.nextLine();
                     } 
+                     
         } catch (InputMismatchException e) {
             System.out.println("Please use numbers for the values.");
             input.nextLine();
